@@ -1,0 +1,16 @@
+﻿@using System.Globalization;
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "ReTeeMaster.cshtml";
+}
+
+<section style="background-image: url('@Umbraco.TypedMedia(CurrentPage.backgroundImage.ToString()).Url');">
+    <article>
+        <h1 class="logo">ReTee ry</h1>
+        @CurrentPage.bodyText
+        @{
+            CultureInfo ci = new CultureInfo(Model.CurrentCulture.ToString());
+        }
+        <p><i>@umbraco.library.GetDictionaryItem("Content Updated") @Model.Content.UpdateDate.ToString("d", ci)</i></p>
+    </article>
+</section>

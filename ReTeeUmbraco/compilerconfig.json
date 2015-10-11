@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "umbraco/Css/retee.css",
+    "inputFile": "umbraco/Css/retee.less"
+  },
+  {
+    "outputFile": "css/retee.css",
+    "inputFile": "css/retee.less"
+  }
+]
