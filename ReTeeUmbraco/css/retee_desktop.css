@@ -1,0 +1,15 @@
+﻿body .navContainer {
+  height: 51px;
+}
+body .navContainer .navbar-default {
+  border-bottom-width: 0;
+}
+body .navContainer .navbar-default .navbar-collapse {
+  padding: 0;
+}
+body .boxNews {
+  height: 300px;
+}
+body .boxNews .boxNewsContainer {
+  height: 260px;
+}

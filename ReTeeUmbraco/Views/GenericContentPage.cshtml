@@ -1,0 +1,21 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "ReTeeMaster.cshtml";
+}
+
+<div class="container-fluid" style="border-top: 1px red solid;">
+    <div class="container">
+        <div class="col-md-12" style="background: #e2e2e2; margin-top: 30px; border-bottom: 4px red solid; position: relative; margin-bottom: 100px;">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-10" style="background: #f2f2f2; top: 100px;border-bottom: 4px red solid;padding: 30px 50px;">
+                <h1>@Umbraco.Field(CurrentPage, "pageName")</h1>
+                <article>
+                    @Html.Raw(Umbraco.Field(CurrentPage, "bodyText"))
+                </article>
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+    </div>
+</div>

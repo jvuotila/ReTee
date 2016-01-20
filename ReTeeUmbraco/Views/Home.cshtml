@@ -1,16 +1,47 @@
 ﻿@using System.Globalization;
+@using Umbraco.Web
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     Layout = "ReTeeMaster.cshtml";
 }
 
-<section style="background-image: url('@Umbraco.TypedMedia(CurrentPage.backgroundImage.ToString()).Url');">
-    <article>
-        <h1 class="logo">ReTee ry</h1>
-        @CurrentPage.bodyText
+@*<section style="background-image: url('@Umbraco.TypedMedia(CurrentPage.backgroundImage.ToString()).Url');">
+        <article>
+            <h1 class="logo">ReTee ry</h1>
+            @CurrentPage.bodyText
+            @{
+                CultureInfo ci = new CultureInfo(Model.CurrentCulture.ToString());
+            }
+            <p><i>@umbraco.library.GetDictionaryItem("Content Updated") @Model.Content.UpdateDate.ToString("d", ci)</i></p>
+        </article>
+    </section>*@
+<div class="container-fluid homepageBannerContainer hidden-xs">
+    <div class="container">
+        <div class="col-md-12" style="background-image: url('@Umbraco.TypedMedia(CurrentPage.bannerImage.ToString()).Url'); height: 400px;"></div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
         @{
-            CultureInfo ci = new CultureInfo(Model.CurrentCulture.ToString());
+            if (CurrentPage.HasValue("News"))
+            {
+                var newsNode = Umbraco.TypedContent(CurrentPage.GetPropertyValue<int>("News"));
+
+                foreach (var newsArticle in newsNode.Children)
+                {
+                    <div class="col-lg-4 col-md-6 col-xs-12" onclick="window.location.href='@newsArticle.Url'">
+                        <div class="boxNews">
+                            <div class="boxNewsContainer">
+                                <h3>@newsArticle.Name</h3>
+                                <span class="date">@newsArticle.UpdateDate.ToString("d")</span>
+                                
+                                <p>@Html.Raw(Umbraco.Field(newsArticle, "lead"))</p>
+                                <p class="readMore">@Umbraco.GetDictionaryValue("Read more")</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
         }
-        <p><i>@umbraco.library.GetDictionaryItem("Content Updated") @Model.Content.UpdateDate.ToString("d", ci)</i></p>
-    </article>
-</section>
+    </div>
+</div>

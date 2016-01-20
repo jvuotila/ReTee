@@ -6,18 +6,19 @@
     Layout = null;
 
     Html.RequiresJs("~/scripts/jquery-1.11.3.min.js", 1);
-    Html.RequiresJs("~/scripts/ui.js", 2);
-
-    //Html.RequiresCss("~/Css/retee.min.css");
+    Html.RequiresJs("~/js/bootstrap.min.js", 2);
+    Html.RequiresJs("~/js/ie10-viewport-bug-workaround.js", 3);
+    Html.RequiresJs("~/scripts/ui.js", 4);
 
     var home = CurrentPage.AncestorOrSelf(1);
 }
 <!DOCTYPE html>
 <html lang="@Model.CurrentCulture.ToString()">
 <head>
-    <title>@home.pageName | ReTee ry</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="noodp">
     <meta name="revisit-after" content="7 days">
@@ -27,42 +28,65 @@
     <meta name="keywords" content="@home.metaKeywords">
     <meta name="author" content="ReTee ry">
     <link rel="canonical" href="@CurrentPage.Url" />
+    <title>@home.pageName | ReTee ry</title>
+
     @*<link rel="shortcut icon" href="~/favicon.png" />*@
-    
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    @*<link href="~/css/bootstrap-submenu.css" rel="stylesheet" />*@
+    <link href="~/css/ie10-viewport-bug-workaround.css" rel="stylesheet" />
     <link href="~/Css/retee.min.css" type="text/css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+      <script src="~/js/html5shiv.min.js"></script>
+      <script src="~/js/respond.min.js"></script>
+    <![endif]-->
+
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li onclick="changeLang();">@umbraco.library.GetDictionaryItem("lang " + @Model.CurrentCulture.ToString().ToLower()).ToUpper()</li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container-fluid headerContainer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12"><img src="~/Images/logo.png" alt="ReTee ry" class="logoImage" style="height: 70px; margin: 15px 0 15px 0;" /></div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid navContainer">
+        <div class="container">
+            @{ Html.RenderPartial("TopNavigation"); }
+        </div>
+    </div>
     @RenderBody()
-    @*@Html.RenderCssHere()*@
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="container">
+                <p>&copy; ReTee ry @DateTime.Now.Year</p>
+            </div>
+        </div>
+    </footer>
     @Html.RenderJsHere()
     <script type="text/javascript">
-      WebFontConfig = {
-        google: { families: [ 'Lato::latin', 'La+Belle+Aurore::latin' ] }
-      };
-      (function() {
-        var wf = document.createElement('script');
-        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-        wf.type = 'text/javascript';
-        wf.async = 'true';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(wf, s);
-      })(); </script>
+        WebFontConfig = {
+            google: { families: ['Roboto:400,700,400italic:latin'] }
+        };
+        (function () {
+            var wf = document.createElement('script');
+            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+              '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })(); </script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-      ga('create', 'UA-68625071-1', 'auto');
-      ga('send', 'pageview');
+        ga('create', 'UA-68625071-1', 'auto');
+        ga('send', 'pageview');
     </script>
 </body>
 </html>

@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReTeeUmbraco", "ReTeeUmbraco\ReTeeUmbraco.csproj", "{6F06ADB2-6EF6-44B0-AD6C-FB61AB7AE7ED}"
+	ProjectSection(ProjectDependencies) = postProject
+		{99DB98D9-3893-42EB-AB9A-AC0C651A3687} = {99DB98D9-3893-42EB-AB9A-AC0C651A3687}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailSender", "EmailSender\EmailSender.csproj", "{99DB98D9-3893-42EB-AB9A-AC0C651A3687}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +20,10 @@ Global
 		{6F06ADB2-6EF6-44B0-AD6C-FB61AB7AE7ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F06ADB2-6EF6-44B0-AD6C-FB61AB7AE7ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F06ADB2-6EF6-44B0-AD6C-FB61AB7AE7ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99DB98D9-3893-42EB-AB9A-AC0C651A3687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99DB98D9-3893-42EB-AB9A-AC0C651A3687}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99DB98D9-3893-42EB-AB9A-AC0C651A3687}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99DB98D9-3893-42EB-AB9A-AC0C651A3687}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

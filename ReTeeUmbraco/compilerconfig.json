@@ -6,5 +6,21 @@
   {
     "outputFile": "css/retee.css",
     "inputFile": "css/retee.less"
+  },
+  {
+    "outputFile": "css/retee_desktop.css",
+    "inputFile": "css/retee_desktop.less"
+  },
+  {
+    "outputFile": "css/retee_tablet.css",
+    "inputFile": "css/retee_tablet.less"
+  },
+  {
+    "outputFile": "css/retee_mobile.css",
+    "inputFile": "css/retee_mobile.less"
+  },
+  {
+    "outputFile": "css/retee_general.css",
+    "inputFile": "css/retee_general.less"
   }
 ]

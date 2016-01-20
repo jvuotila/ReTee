@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+    <files>
+        <file>
+            <guid>MemberExport.dll</guid>
+            <orgPath>/bin</orgPath>
+            <orgName>MemberExport.dll</orgName>
+        </file>
+        <file>
+            <guid>MemberExport.Core.dll</guid>
+            <orgPath>/bin</orgPath>
+            <orgName>MemberExport.Core.dll</orgName>
+        </file>
+        <file>
+            <guid>MemberExport.DAL.dll</guid>
+            <orgPath>/bin</orgPath>
+            <orgName>MemberExport.DAL.dll</orgName>
+        </file>
+        <file>
+            <guid>MemberExport.Library.dll</guid>
+            <orgPath>/bin</orgPath>
+            <orgName>MemberExport.Library.dll</orgName>
+        </file>
+        <file>
+            <guid>MemberExport.Resources.dll</guid>
+            <orgPath>/bin</orgPath>
+            <orgName>MemberExport.Resources.dll</orgName>
+        </file>
+        <file>
+            <guid>PackageActionsContrib.dll</guid>
+            <orgPath>/bin</orgPath>
+            <orgName>PackageActionsContrib.dll</orgName>
+        </file>
+        <file>
+            <guid>DTG.Spreadsheet.dll</guid>
+            <orgPath>/bin</orgPath>
+            <orgName>DTG.Spreadsheet.dll</orgName>
+        </file>
+      <file>
+        <guid>PackageGarden.Licensing.dll</guid>
+        <orgPath>/bin</orgPath>
+        <orgName>PackageGarden.Licensing.dll</orgName>
+      </file>
+        <file>
+            <guid>Umbraco.Licensing.dll</guid>
+            <orgPath>/bin</orgPath>
+            <orgName>Umbraco.Licensing.dll</orgName>
+        </file>
+        <file>
+            <guid>csvexport.gif</guid>
+            <orgPath>/umbraco/plugins/MemberExport/Images</orgPath>
+            <orgName>csvexport.gif</orgName>
+        </file>
+        <file>
+            <guid>excelexport.png</guid>
+            <orgPath>/umbraco/plugins/MemberExport/Images</orgPath>
+            <orgName>excelexport.png</orgName>
+        </file>
+        <file>
+            <guid>memberexport.png</guid>
+            <orgPath>/umbraco/plugins/MemberExport/Images</orgPath>
+            <orgName>memberexport.png</orgName>
+        </file>
+      <file>
+        <guid>csvexport-bw.png</guid>
+        <orgPath>/umbraco/plugins/MemberExport/Images</orgPath>
+        <orgName>csvexport-bw.png</orgName>
+      </file>
+      <file>
+        <guid>excelexport-bw.png</guid>
+        <orgPath>/umbraco/plugins/MemberExport/Images</orgPath>
+        <orgName>excelexport-bw.png</orgName>
+      </file>
+        <file>
+            <guid>Error.aspx</guid>
+            <orgPath>/umbraco/plugins/MemberExport</orgPath>
+            <orgName>Error.aspx</orgName>
+        </file>
+        <file>
+            <guid>MemberExport.aspx</guid>
+            <orgPath>/umbraco/plugins/MemberExport</orgPath>
+            <orgName>MemberExport.aspx</orgName>
+        </file>
+        <file>
+            <guid>MemberExport.ascx</guid>
+            <orgPath>/umbraco/plugins/MemberExport/UserControls</orgPath>
+            <orgName>MemberExport.ascx</orgName>
+        </file>
+      <file>
+        <guid>MemberExport.config</guid>
+        <orgPath>/app_data/temp/memberexport</orgPath>
+        <orgName>memberexport.config</orgName>
+      </file>
+    </files>
+    <info>
+        <package>
+            <name>MemberExport</name>
+            <version>2.8.1</version>
+            <license url="http://soetemansoftware.nl/member-export/memberexport-licenseagreement">Member export (PRO) license agreement</license>
+            <url>http://soetemansoftware.nl/member-export</url>
+            <requirements>
+                <major>4</major>
+                <minor>5</minor>
+                <patch>0</patch>
+            </requirements>
+        </package>
+        <author>
+            <name>Soeteman Software</name>
+            <website>http://www.soetemansoftware.nl</website>
+        </author>
+        <readme>
+            <![CDATA[MemberExport helps you exporting Umbraco members to an Excel or csv file. One installed it adds a new folder to the Members section. 
+
+MemberExport PRO can export thousands of members in seconds, you can export directly to Excel and you can save your export options for later use. 
+
+If you don't have a license file Memberexport is limited to export 200 records and CSV output only,
+
+IMPORTANT: This installer will need modify rights to folders: /bin and /umbraco, folder and also needs to be allowed to create tables in the database. For a manual installation read the documentation.
+
+Memberexport uses icons from Mark James (http://www.famfamfam.com/lab/icons/silk/
+]]>
+        </readme>
+    </info>
+    <DocumentTypes />
+    <Templates />
+    <Stylesheets />
+    <Macros />
+    <DictionaryItems />
+    <Languages />
+    <DataTypes />
+    <Actions>
+       
+    </Actions>
+</umbPackage>

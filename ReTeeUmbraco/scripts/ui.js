@@ -1,4 +1,6 @@
-﻿function changeLang() {
+﻿$('.dropdown-toggle').dropdown()
+
+function changeLang() {
     switch($("html").prop("lang").toLowerCase()) {
         case "en-us":
             location.replace("http://" + window.location.host);
@@ -11,4 +13,5 @@
     }
 
     return false;
+
 }
