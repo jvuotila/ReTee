@@ -21,7 +21,7 @@
                     foreach (var banner in bannersNode.Children)
                     {
 
-                        var BoolLink = (Umbraco.Field(banner, "bannerLink") != null);
+                        var BoolLink = (Umbraco.Field(banner, "bannerLink").ToString() != "");
                         var LinkUrl = string.Empty;
                         if (BoolLink)
                         {
