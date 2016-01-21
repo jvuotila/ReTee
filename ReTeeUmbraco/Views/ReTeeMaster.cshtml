@@ -9,6 +9,8 @@
     Html.RequiresJs("~/js/bootstrap.min.js", 2);
     Html.RequiresJs("~/js/ie10-viewport-bug-workaround.js", 3);
     Html.RequiresJs("~/scripts/ui.js", 4);
+    Html.RequiresJs("~/js/jquery.cycle.all.js", 5);
+    Html.RequiresJs("~/scripts/banners.js", 6);
 
     var home = CurrentPage.AncestorOrSelf(1);
 }
@@ -28,7 +30,7 @@
     <meta name="keywords" content="@home.metaKeywords">
     <meta name="author" content="ReTee ry">
     <link rel="canonical" href="@CurrentPage.Url" />
-    <title>@home.pageName | ReTee ry</title>
+    <title>@home.Name | ReTee ry</title>
 
     @*<link rel="shortcut icon" href="~/favicon.png" />*@
 
@@ -43,19 +45,21 @@
 
 </head>
 <body>
-    <div class="container-fluid headerContainer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12"><img src="~/Images/logo.png" alt="ReTee ry" class="logoImage" style="height: 70px; margin: 15px 0 15px 0;" /></div>
+    <div class="bodyWrapper">
+        <div class="container-fluid headerContainer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12"><img src="~/Images/logo.png" alt="ReTee ry" class="logoImage" style="height: 70px; margin: 15px 0 15px 0;" /></div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid navContainer">
-        <div class="container">
-            @{ Html.RenderPartial("TopNavigation"); }
+        <div class="container-fluid navContainer">
+            <div class="container">
+                @{ Html.RenderPartial("TopNavigation"); }
+            </div>
         </div>
+        @RenderBody()
     </div>
-    @RenderBody()
     <footer class="footer">
         <div class="container-fluid">
             <div class="container">
@@ -66,7 +70,7 @@
     @Html.RenderJsHere()
     <script type="text/javascript">
         WebFontConfig = {
-            google: { families: ['Roboto:400,700,400italic:latin'] }
+            google: { families: ['Roboto:400,400italic,700:latin', 'Volkhov:700italic:latin'] }
         };
         (function () {
             var wf = document.createElement('script');

@@ -280,7 +280,9 @@
     <Content Include="bin\SendGrid.SmtpApi.dll" />
     <Content Include="bin\SendGridMail.dll" />
     <Content Include="bin\Umbraco.Licensing.dll" />
+    <Content Include="css\bootstrap-submenu.css" />
     <Content Include="css\ie10-viewport-bug-workaround.css" />
+    <Content Include="css\images\fabric_of_squares_gray.png" />
     <Content Include="css\retee_desktop.css">
       <DependentUpon>retee_desktop.less</DependentUpon>
     </Content>
@@ -305,9 +307,28 @@
     <Content Include="css\retee_tablet.min.css">
       <DependentUpon>retee_tablet.css</DependentUpon>
     </Content>
+    <Content Include="Images\logo.png" />
     <Content Include="js\html5shiv.min.js" />
     <Content Include="js\ie10-viewport-bug-workaround.js" />
     <Content Include="js\respond.min.js" />
+    <Content Include="media\1050\20150531-_n0a8355.jpg" />
+    <Content Include="media\1050\20150531-_n0a8355_big-thumb.jpg" />
+    <Content Include="media\1050\20150531-_n0a8355_thumb.jpg" />
+    <Content Include="media\1051\20150531-_n0a8280.jpg" />
+    <Content Include="media\1051\20150531-_n0a8280_big-thumb.jpg" />
+    <Content Include="media\1051\20150531-_n0a8280_thumb.jpg" />
+    <Content Include="media\1052\20150531-_n0a8592.jpg" />
+    <Content Include="media\1052\20150531-_n0a8592_big-thumb.jpg" />
+    <Content Include="media\1052\20150531-_n0a8592_thumb.jpg" />
+    <Content Include="media\1053\elmo-sport-urheilulinna.png" />
+    <Content Include="media\1053\elmo-sport-urheilulinna_thumb.jpg" />
+    <Content Include="media\1054\logo_400px_transparent.png" />
+    <Content Include="media\1054\logo_400px_transparent_thumb.jpg" />
+    <Content Include="media\1055\20150531-_dsf0924.jpg" />
+    <Content Include="media\1055\20150531-_dsf0924_thumb.jpg" />
+    <Content Include="media\1056\naama.jpg" />
+    <Content Include="media\1056\naama_big-thumb.jpg" />
+    <Content Include="media\1056\naama_thumb.jpg" />
     <Content Include="packages.config" />
     <Content Include="css\retee.css">
       <DependentUpon>retee.less</DependentUpon>
@@ -315,6 +336,7 @@
     <Content Include="css\retee.min.css">
       <DependentUpon>retee.css</DependentUpon>
     </Content>
+    <Content Include="scripts\banners.js" />
     <Content Include="scripts\jquery-1.11.3.min.js" />
     <None Include="scripts\jquery.validate-vsdoc.js" />
     <None Include="scripts\jquery-1.8.0.intellisense.js" />
@@ -569,6 +591,7 @@
     <Content Include="Views\MemberRegistrationForm.cshtml" />
     <Content Include="Views\News.cshtml" />
     <Content Include="Views\NewsListing.cshtml" />
+    <Content Include="Views\Board.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

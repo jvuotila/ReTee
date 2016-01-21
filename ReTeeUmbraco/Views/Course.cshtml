@@ -1,0 +1,56 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "ReTeeMaster.cshtml";
+}
+
+<div class="container-fluid artileWrapper">
+    <div class="container">
+        <div class="col-xs-12 col-md-12 articleContainer">
+            <div class="col-md-1 hidden-xs"></div>
+            <div class="col-md-10 col-xs-12 articleBody">
+                <h1>@CurrentPage.Name</h1>
+                <article style="margin-bottom: 50px;">
+                    @Html.Raw(Umbraco.Field(CurrentPage, "bodyText"))
+                    <p><strong>Radan osoite:</strong> @Umbraco.Field(CurrentPage, "address")</p>
+
+                    @if (Umbraco.Field(CurrentPage, "courseMap").ToString() != "")
+                    {
+                        
+                            <a href="@Umbraco.TypedMedia(Umbraco.Field(CurrentPage, "courseMap").ToString()).Url" target="_blank"><img src="/imagegen.ashx?image=@Umbraco.TypedMedia(Umbraco.Field(CurrentPage, "courseMap").ToString()).Url&width=800&constrain=true&compression=75" alt="@CurrentPage.Name" style="width: 100%;" /></a>
+                    }
+                </article>
+
+                @if (CurrentPage.Children.Count() > 0)
+                {
+                    foreach (var Fairway in CurrentPage.Children)
+                    {
+                        <div class="row" style="margin-bottom: 30px;">
+                            <div class="col-xs-12 col-md-4">
+                                @if (Umbraco.Field(Fairway, "teeSign").ToString() != "")
+                                {
+                                    <div class="memberPhotoWrapper"><img src="/imagegen.ashx?image=@Umbraco.TypedMedia(Umbraco.Field(Fairway, "teeSign").ToString()).Url&width=200&constrain=false&crop=resize&compression=75" alt="@Fairway.Name" style="max-width: 100%;" /></div>
+                                }
+                            </div>
+                            <div class="col-xs-12 col-md-8">
+                                <h3>@Fairway.Name</h3>
+                                <p style="font-weight: 700;">
+                                    @{
+                                        int LengthFt = (int)Math.Floor(int.Parse(Umbraco.Field(Fairway, "length").ToString()) / 0.3048);
+                                    }
+
+                                    Par @Umbraco.Field(Fairway, "par")<br/>
+                                    @Umbraco.Field(Fairway, "length") m / @LengthFt ft
+                                </p>
+                                <p>
+                                    @Umbraco.Field(Fairway, "description")
+                                </p>
+                            </div>
+                        </div>
+                                            }
+                                        }
+            </div>
+            <div class="col-md-1 hidden-xs">
+            </div>
+        </div>
+    </div>
+</div>

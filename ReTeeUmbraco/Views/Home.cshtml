@@ -1,23 +1,46 @@
 ﻿@using System.Globalization;
 @using Umbraco.Web
+@using ClientDependency.Core.Mvc
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     Layout = "ReTeeMaster.cshtml";
+
+    //Html.RequiresJs("~/js/jquery.cycle.all.js", 1);
+    //Html.RequiresJs("~/scripts/banners.js", 2);
+
 }
 
-@*<section style="background-image: url('@Umbraco.TypedMedia(CurrentPage.backgroundImage.ToString()).Url');">
-        <article>
-            <h1 class="logo">ReTee ry</h1>
-            @CurrentPage.bodyText
-            @{
-                CultureInfo ci = new CultureInfo(Model.CurrentCulture.ToString());
-            }
-            <p><i>@umbraco.library.GetDictionaryItem("Content Updated") @Model.Content.UpdateDate.ToString("d", ci)</i></p>
-        </article>
-    </section>*@
 <div class="container-fluid homepageBannerContainer hidden-xs">
     <div class="container">
-        <div class="col-md-12" style="background-image: url('@Umbraco.TypedMedia(CurrentPage.bannerImage.ToString()).Url'); height: 400px;"></div>
+        <div id="banners">
+            @{
+                if (CurrentPage.HasValue("banners"))
+                {
+                    var bannersNode = Umbraco.TypedContent(CurrentPage.GetPropertyValue<int>("banners"));
+
+                    foreach (var banner in bannersNode.Children)
+                    {
+
+                        var BoolLink = (Umbraco.Field(banner, "bannerLink") != null);
+                        var LinkUrl = string.Empty;
+                        if (BoolLink)
+                        {
+                            var BannerID = Umbraco.Field(banner, "bannerLink").ToString();
+                            LinkUrl = Umbraco.TypedContent(BannerID).Url;
+                        }
+
+                        <div class="col-md-12" style="background-image: url('@Umbraco.TypedMedia(Umbraco.Field(banner, "bannerImage").ToString()).Url');height: 400px;@if (BoolLink) { <text>cursor: pointer;</text> }" @if (BoolLink) { <text> onclick="window.location.href='@LinkUrl'" </text>   }>
+                            <div class="col-md-6">
+                                <p class="bannerText">
+                                    @Umbraco.Field(banner, "bannerText") @if (BoolLink)
+                                    { <text>&raquo;</text> }
+                                </p>
+                            </div>
+                        </div>
+                    }
+                }
+            }
+        </div>
     </div>
 </div>
 <div class="container">
@@ -34,7 +57,7 @@
                             <div class="boxNewsContainer">
                                 <h3>@newsArticle.Name</h3>
                                 <span class="date">@newsArticle.UpdateDate.ToString("d")</span>
-                                
+
                                 <p>@Html.Raw(Umbraco.Field(newsArticle, "lead"))</p>
                                 <p class="readMore">@Umbraco.GetDictionaryValue("Read more")</p>
                             </div>
@@ -45,3 +68,4 @@
         }
     </div>
 </div>
+@*@Html.RenderJsHere()*@

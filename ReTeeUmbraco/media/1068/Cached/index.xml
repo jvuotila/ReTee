@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<imageIndex>
+  <_t>
+    <image>
+      <originalFileName>tervakoski_ratakartta_2015_12.png</originalFileName>
+      <size>341696</size>
+      <dateLastModified>Thu, 21 Jan 2016 17:56:09 GMT</dateLastModified>
+      <width>1191</width>
+      <height>953</height>
+      <cachedImage>
+        <fileName>TER_1bec5ca0799acc08cf419e7ef78bc34c32d33dcee3ade007930e8f8e0e8ab54b.png</fileName>
+        <dateCreated>Thu, 21 Jan 2016 17:59:11 GMT</dateCreated>
+        <imageFormat>png</imageFormat>
+        <rotate>0</rotate>
+        <flip />
+        <colorMode />
+        <crop>resize</crop>
+        <width>200</width>
+        <height>160</height>
+        <bgColor>#FFFFFF</bgColor>
+        <transparent>True</transparent>
+        <border>0</border>
+        <borderColor>#000000</borderColor>
+        <constrain>False</constrain>
+        <pad>False</pad>
+        <align>left</align>
+        <valign>middle</valign>
+      </cachedImage>
+      <cachedImage>
+        <fileName>TER_1a326a6ea74b45efee247f8b5f31f474e0e6610db0cbc72e73d0970c71f08980.png</fileName>
+        <dateCreated>Thu, 21 Jan 2016 17:59:27 GMT</dateCreated>
+        <imageFormat>png</imageFormat>
+        <rotate>0</rotate>
+        <flip />
+        <colorMode />
+        <crop>resize</crop>
+        <width>500</width>
+        <height>400</height>
+        <bgColor>#FFFFFF</bgColor>
+        <transparent>True</transparent>
+        <border>0</border>
+        <borderColor>#000000</borderColor>
+        <constrain>False</constrain>
+        <pad>False</pad>
+        <align>left</align>
+        <valign>middle</valign>
+      </cachedImage>
+      <cachedImage>
+        <fileName>TER_db371af882e864f87b10705d4199eeb4aaecacfb09aa78c5f0664ca88ac417e9.png</fileName>
+        <dateCreated>Thu, 21 Jan 2016 18:00:21 GMT</dateCreated>
+        <imageFormat>png</imageFormat>
+        <rotate>0</rotate>
+        <flip />
+        <colorMode />
+        <crop>resize</crop>
+        <width>800</width>
+        <height>700</height>
+        <bgColor>#FFFFFF</bgColor>
+        <transparent>True</transparent>
+        <border>0</border>
+        <borderColor>#000000</borderColor>
+        <constrain>False</constrain>
+        <pad>False</pad>
+        <align>left</align>
+        <valign>middle</valign>
+      </cachedImage>
+      <cachedImage>
+        <fileName>TER_1548563cc398e43fab5c76790843bbaecc2d517d26838d9429e041d2897efa4d.png</fileName>
+        <dateCreated>Thu, 21 Jan 2016 18:00:46 GMT</dateCreated>
+        <imageFormat>png</imageFormat>
+        <rotate>0</rotate>
+        <flip />
+        <colorMode />
+        <crop />
+        <width>800</width>
+        <height>700</height>
+        <bgColor>#FFFFFF</bgColor>
+        <transparent>True</transparent>
+        <border>0</border>
+        <borderColor>#000000</borderColor>
+        <constrain>False</constrain>
+        <pad>False</pad>
+      </cachedImage>
+      <cachedImage>
+        <fileName>TER_64e24e040b644dd76ef7d81b4d24e33c3b9029a84ec180b1cb567194ea7d4eee.png</fileName>
+        <dateCreated>Thu, 21 Jan 2016 18:01:17 GMT</dateCreated>
+        <imageFormat>png</imageFormat>
+        <rotate>0</rotate>
+        <flip />
+        <colorMode />
+        <crop />
+        <width>800</width>
+        <height>720</height>
+        <bgColor>#FFFFFF</bgColor>
+        <transparent>True</transparent>
+        <border>0</border>
+        <borderColor>#000000</borderColor>
+        <constrain>False</constrain>
+        <pad>False</pad>
+      </cachedImage>
+      <cachedImage>
+        <fileName>TER_97b2e314b430e6f665daec1c3b0235a0ea1b0f200f634f7c8e43b4efeb36f28a.png</fileName>
+        <dateCreated>Thu, 21 Jan 2016 18:01:53 GMT</dateCreated>
+        <imageFormat>png</imageFormat>
+        <rotate>0</rotate>
+        <flip />
+        <colorMode />
+        <crop />
+        <width>800</width>
+        <height>640</height>
+        <bgColor>#FFFFFF</bgColor>
+        <transparent>True</transparent>
+        <border>0</border>
+        <borderColor>#000000</borderColor>
+        <constrain>True</constrain>
+        <pad>False</pad>
+      </cachedImage>
+      <cachedImage>
+        <fileName>TER_39838aacfd722d88e055f4c433f40654d3fbdd2e1de8ad55c654524a2eee9937.png</fileName>
+        <dateCreated>Thu, 21 Jan 2016 18:03:00 GMT</dateCreated>
+        <imageFormat>png</imageFormat>
+        <rotate>0</rotate>
+        <flip />
+        <colorMode />
+        <crop />
+        <width>500</width>
+        <height>400</height>
+        <bgColor>#FFFFFF</bgColor>
+        <transparent>True</transparent>
+        <border>0</border>
+        <borderColor>#000000</borderColor>
+        <constrain>True</constrain>
+        <pad>False</pad>
+      </cachedImage>
+    </image>
+  </_t>
+</imageIndex>

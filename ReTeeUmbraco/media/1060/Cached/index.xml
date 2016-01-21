@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<imageIndex>
+  <_t>
+    <image>
+      <originalFileName>tervakoski_vayla_03.png</originalFileName>
+      <size>61100</size>
+      <dateLastModified>Thu, 21 Jan 2016 16:16:18 GMT</dateLastModified>
+      <width>595</width>
+      <height>842</height>
+      <cachedImage>
+        <fileName>TER_e6530fe87c57ab4dd0b40f2df9884fa67b5eaf4f9ae23518b745ff8f77d0430d.png</fileName>
+        <dateCreated>Thu, 21 Jan 2016 17:32:37 GMT</dateCreated>
+        <imageFormat>png</imageFormat>
+        <rotate>0</rotate>
+        <flip />
+        <colorMode />
+        <crop>resize</crop>
+        <width>200</width>
+        <height>283</height>
+        <bgColor>#FFFFFF</bgColor>
+        <transparent>True</transparent>
+        <border>0</border>
+        <borderColor>#000000</borderColor>
+        <constrain>False</constrain>
+        <pad>False</pad>
+        <align>left</align>
+        <valign>middle</valign>
+      </cachedImage>
+      <cachedImage>
+        <fileName>TER_c66ec48b4f8323d8bd1c5faaf7c61acac3c75f7309cbc04e519be9452dadc49b.png</fileName>
+        <dateCreated>Thu, 21 Jan 2016 18:00:57 GMT</dateCreated>
+        <imageFormat>png</imageFormat>
+        <rotate>0</rotate>
+        <flip />
+        <colorMode />
+        <crop />
+        <width>200</width>
+        <height>283</height>
+        <bgColor>#FFFFFF</bgColor>
+        <transparent>True</transparent>
+        <border>0</border>
+        <borderColor>#000000</borderColor>
+        <constrain>False</constrain>
+        <pad>False</pad>
+      </cachedImage>
+    </image>
+  </_t>
+</imageIndex>
