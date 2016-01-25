@@ -10,7 +10,6 @@
     Html.RequiresJs("~/js/ie10-viewport-bug-workaround.js", 3);
     Html.RequiresJs("~/scripts/ui.js", 4);
     Html.RequiresJs("~/js/jquery.cycle.all.js", 5);
-    Html.RequiresJs("~/scripts/banners.js", 6);
 
     var home = CurrentPage.AncestorOrSelf(1);
 }
@@ -26,16 +25,15 @@
     <meta name="revisit-after" content="7 days">
     <meta name="language" content="@Model.CurrentCulture.ToString()">
     <meta http-equiv="Cache-control" content="private, max-age=600, pre-check=600">
-    <meta name="description" content="@home.metaDescription">
-    <meta name="keywords" content="@home.metaKeywords">
+    <meta name="description" content="@if(CurrentPage.metaDescription != "") { @CurrentPage.metaDescription } else {@home.metaDescription}">
+    <meta name="keywords" content="@if(CurrentPage.metaKeywords != "") { @CurrentPage.metaKeywords } else {@home.metaKeywords}">
     <meta name="author" content="ReTee ry">
     <link rel="canonical" href="@CurrentPage.Url" />
-    <title>@home.Name | ReTee ry</title>
+    <title>@home.Name | @CurrentPage.Name</title>
 
-    @*<link rel="shortcut icon" href="~/favicon.png" />*@
+    <link rel="shortcut icon" href="~/favicon.png" />
 
     <link href="~/css/bootstrap.min.css" rel="stylesheet" />
-    @*<link href="~/css/bootstrap-submenu.css" rel="stylesheet" />*@
     <link href="~/css/ie10-viewport-bug-workaround.css" rel="stylesheet" />
     <link href="~/Css/retee.min.css" type="text/css" rel="stylesheet" />
     <!--[if lt IE 9]>
@@ -68,6 +66,7 @@
         </div>
     </footer>
     @Html.RenderJsHere()
+    
     <script type="text/javascript">
         WebFontConfig = {
             google: { families: ['Roboto:400,400italic,700:latin', 'Volkhov:700italic:latin'] }

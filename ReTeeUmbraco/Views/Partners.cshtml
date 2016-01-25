@@ -1,0 +1,46 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "ReTeeMaster.cshtml";
+}
+
+<div class="container-fluid artileWrapper">
+    <div class="container">
+        <div class="col-xs-12 col-md-12 articleContainer">
+            <div class="col-md-1 hidden-xs"></div>
+            <div class="col-md-10 col-xs-12 articleBody">
+                <h1>@CurrentPage.Name</h1>
+                <article class="lead">
+                    @Html.Raw(Umbraco.Field(CurrentPage, "bodyText"))
+                </article>
+
+                @{
+                    if (CurrentPage.Children.Count() > 0)
+                    {
+                        foreach (var Partner in CurrentPage.Children)
+                        {
+                            <div class="row boardMemberContainer">
+                                <div class="col-xs-12 col-md-4">
+                                    @if (Umbraco.Field(Partner, "logo").ToString() != "")
+                                    {
+                                        if (Umbraco.Field(Partner, "partnerUrl").ToString() != "") {
+    <div class="memberPhotoWrapper"><a href="@Umbraco.Field(Partner, "partnerUrl")" target="_blank"><img src="/imagegen.ashx?image=@Umbraco.TypedMedia(Umbraco.Field(Partner, "logo").ToString()).Url&width=200&constrain=false&crop=resize&compression=75" alt="@Partner.Name)" style="margin-top: 20px;" /></a></div>
+                                        }
+                                        else {
+    <div class="memberPhotoWrapper"><img src="/imagegen.ashx?image=@Umbraco.TypedMedia(Umbraco.Field(Partner, "logo").ToString()).Url&width=200&constrain=false&crop=resize&compression=75" alt="@Partner.Name)" style="margin-top: 20px;" /></div>
+                                        }
+                                    }
+                                </div>
+                                <div class="col-xs-12 col-md-8">
+                                    <h2>@Partner.Name</h2>
+                                    <p>@Umbraco.Field(Partner, "bodyText")</p>
+                                </div>
+                            </div>
+                        }
+                    }
+                }
+            </div>
+            <div class="col-md-1 hidden-xs">
+            </div>
+        </div>
+    </div>
+</div>

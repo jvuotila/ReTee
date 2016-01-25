@@ -280,7 +280,6 @@
     <Content Include="bin\SendGrid.SmtpApi.dll" />
     <Content Include="bin\SendGridMail.dll" />
     <Content Include="bin\Umbraco.Licensing.dll" />
-    <Content Include="css\bootstrap-submenu.css" />
     <Content Include="css\ie10-viewport-bug-workaround.css" />
     <Content Include="css\images\fabric_of_squares_gray.png" />
     <Content Include="css\retee_desktop.css">
@@ -307,6 +306,7 @@
     <Content Include="css\retee_tablet.min.css">
       <DependentUpon>retee_tablet.css</DependentUpon>
     </Content>
+    <Content Include="favicon.png" />
     <Content Include="Images\logo.png" />
     <Content Include="js\html5shiv.min.js" />
     <Content Include="js\ie10-viewport-bug-workaround.js" />
@@ -329,6 +329,98 @@
     <Content Include="media\1056\naama.jpg" />
     <Content Include="media\1056\naama_big-thumb.jpg" />
     <Content Include="media\1056\naama_thumb.jpg" />
+    <Content Include="media\1057\Cached\HOM_37654cbe831478be8c44882f7d8c8d52fbba37c94cd4d96717a9c15a3f627679.png" />
+    <Content Include="media\1057\Cached\HOM_d7034cf32f04b07d3bd26ba9961b076e61e2d557ae25f21a89395d0d2bdc3b64.png" />
+    <Content Include="media\1057\Cached\index.xml" />
+    <Content Include="media\1057\homer-excited.png" />
+    <Content Include="media\1057\homer-excited_thumb.jpg" />
+    <Content Include="media\1058\Cached\index.xml" />
+    <Content Include="media\1058\Cached\TER_c4b942aa2c4066d00799259838ec0fe7bd46f22ceed6d1fc54b39c5a55d02a21.png" />
+    <Content Include="media\1058\Cached\TER_d41be16473799ba47218354ba6eff0434c95d7d2fe52ffd0c180546e4e0551ad.png" />
+    <Content Include="media\1058\tervakoski_vayla_01.png" />
+    <Content Include="media\1058\tervakoski_vayla_01_big-thumb.jpg" />
+    <Content Include="media\1058\tervakoski_vayla_01_thumb.jpg" />
+    <Content Include="media\1059\Cached\index.xml" />
+    <Content Include="media\1059\Cached\TER_7eb74de2353981a3aace209eb4a6c35cca13d0c636c6cc457633702724858ca6.png" />
+    <Content Include="media\1059\Cached\TER_def9e116f201fab68a3a64a8ae16cbeac567cde4849e86749a22fd57dc44d709.png" />
+    <Content Include="media\1059\tervakoski_vayla_02.png" />
+    <Content Include="media\1059\tervakoski_vayla_02_big-thumb.jpg" />
+    <Content Include="media\1059\tervakoski_vayla_02_thumb.jpg" />
+    <Content Include="media\1060\Cached\index.xml" />
+    <Content Include="media\1060\Cached\TER_c66ec48b4f8323d8bd1c5faaf7c61acac3c75f7309cbc04e519be9452dadc49b.png" />
+    <Content Include="media\1060\Cached\TER_e6530fe87c57ab4dd0b40f2df9884fa67b5eaf4f9ae23518b745ff8f77d0430d.png" />
+    <Content Include="media\1060\tervakoski_vayla_03.png" />
+    <Content Include="media\1060\tervakoski_vayla_03_big-thumb.jpg" />
+    <Content Include="media\1060\tervakoski_vayla_03_thumb.jpg" />
+    <Content Include="media\1061\Cached\index.xml" />
+    <Content Include="media\1061\Cached\TER_0ec0406e60ceddb0ffec778ed6ad10ca630824f853aaf77438b232800cfc945c.png" />
+    <Content Include="media\1061\Cached\TER_7e17ea8bf1affe4aef00d9b5d3731f2157e3aad2ab781a15afa1d054870c99cf.png" />
+    <Content Include="media\1061\tervakoski_vayla_04.png" />
+    <Content Include="media\1061\tervakoski_vayla_04_big-thumb.jpg" />
+    <Content Include="media\1061\tervakoski_vayla_04_thumb.jpg" />
+    <Content Include="media\1062\Cached\index.xml" />
+    <Content Include="media\1062\Cached\TER_32582d64add074baf22c31b3ae8da58d0162ee1d4d8a4491112895d7d85bb573.png" />
+    <Content Include="media\1062\Cached\TER_365d5d9dd8b3e14d7b7bc320bc9bbbc85c88dffd8789d4737327b4ecd2d68da5.png" />
+    <Content Include="media\1062\tervakoski_vayla_05.png" />
+    <Content Include="media\1062\tervakoski_vayla_05_big-thumb.jpg" />
+    <Content Include="media\1062\tervakoski_vayla_05_thumb.jpg" />
+    <Content Include="media\1063\Cached\index.xml" />
+    <Content Include="media\1063\Cached\TER_26501c0dbbd3a914a6586e8cfef97aac02bdbe9dcee35eb0418108c20b4155f1.png" />
+    <Content Include="media\1063\Cached\TER_7362fa202e4c78a747d0eb4fffd46e59a8cc047de78a7e88bab6600b39e253fd.png" />
+    <Content Include="media\1063\tervakoski_vayla_06.png" />
+    <Content Include="media\1063\tervakoski_vayla_06_big-thumb.jpg" />
+    <Content Include="media\1063\tervakoski_vayla_06_thumb.jpg" />
+    <Content Include="media\1064\Cached\index.xml" />
+    <Content Include="media\1064\Cached\TER_0a089469554677d04a877a2a14f253b83a51f68184e9f7412987ba720a95e8c0.png" />
+    <Content Include="media\1064\Cached\TER_e6d5aa11204506954d74c96ca9d0c6f797473a256417b926ff36e525233d75fd.png" />
+    <Content Include="media\1064\tervakoski_vayla_07.png" />
+    <Content Include="media\1064\tervakoski_vayla_07_big-thumb.jpg" />
+    <Content Include="media\1064\tervakoski_vayla_07_thumb.jpg" />
+    <Content Include="media\1065\Cached\index.xml" />
+    <Content Include="media\1065\Cached\TER_e3cd9322f6da0168e574976511672bb6650c6bafcd096bff2c3415d0c5f1e8bd.png" />
+    <Content Include="media\1065\tervakoski_vayla_09.png" />
+    <Content Include="media\1065\tervakoski_vayla_09_big-thumb.jpg" />
+    <Content Include="media\1065\tervakoski_vayla_09_thumb.jpg" />
+    <Content Include="media\1066\Cached\index.xml" />
+    <Content Include="media\1066\Cached\TER_59addb3d4f5199960fabd2b2c383751b77c9085c979d9c91f98662184c501c35.png" />
+    <Content Include="media\1066\Cached\TER_a87054505aaaed7ecd20779f195022856bc336363cb90c76882dd36796606c87.png" />
+    <Content Include="media\1066\tervakoski_vayla_08.png" />
+    <Content Include="media\1066\tervakoski_vayla_08_big-thumb.jpg" />
+    <Content Include="media\1066\tervakoski_vayla_08_thumb.jpg" />
+    <Content Include="media\1068\Cached\index.xml" />
+    <Content Include="media\1068\Cached\TER_1548563cc398e43fab5c76790843bbaecc2d517d26838d9429e041d2897efa4d.png" />
+    <Content Include="media\1068\Cached\TER_1a326a6ea74b45efee247f8b5f31f474e0e6610db0cbc72e73d0970c71f08980.png" />
+    <Content Include="media\1068\Cached\TER_1bec5ca0799acc08cf419e7ef78bc34c32d33dcee3ade007930e8f8e0e8ab54b.png" />
+    <Content Include="media\1068\Cached\TER_39838aacfd722d88e055f4c433f40654d3fbdd2e1de8ad55c654524a2eee9937.png" />
+    <Content Include="media\1068\Cached\TER_64e24e040b644dd76ef7d81b4d24e33c3b9029a84ec180b1cb567194ea7d4eee.png" />
+    <Content Include="media\1068\Cached\TER_97b2e314b430e6f665daec1c3b0235a0ea1b0f200f634f7c8e43b4efeb36f28a.png" />
+    <Content Include="media\1068\Cached\TER_db371af882e864f87b10705d4199eeb4aaecacfb09aa78c5f0664ca88ac417e9.png" />
+    <Content Include="media\1068\tervakoski_ratakartta_2015_12.png" />
+    <Content Include="media\1068\tervakoski_ratakartta_2015_12_big-thumb.jpg" />
+    <Content Include="media\1068\tervakoski_ratakartta_2015_12_thumb.jpg" />
+    <Content Include="media\1069\20150531-_n0a8449.jpg" />
+    <Content Include="media\1069\20150531-_n0a8449_thumb.jpg" />
+    <Content Include="media\1070\20150531-_n0a8467-edit.jpg" />
+    <Content Include="media\1070\20150531-_n0a8467-edit_thumb.jpg" />
+    <Content Include="media\1071\20150531-_n0a8280-2.jpg" />
+    <Content Include="media\1071\20150531-_n0a8280-2_thumb.jpg" />
+    <Content Include="media\1072\20150531-_n0a8195.jpg" />
+    <Content Include="media\1072\20150531-_n0a8195_thumb.jpg" />
+    <Content Include="media\1073\20150531-_n0a8355-3.jpg" />
+    <Content Include="media\1073\20150531-_n0a8355-3_thumb.jpg" />
+    <Content Include="media\1074\Cached\index.xml" />
+    <Content Include="media\1074\Cached\PET_951c160f183a1c8dae32de395e966f08216d245723e7aa8685c7d4dae9a7f252.jpeg" />
+    <Content Include="media\1075\Cached\index.xml" />
+    <Content Include="media\1075\Cached\PET_951c160f183a1c8dae32de395e966f08216d245723e7aa8685c7d4dae9a7f252.jpeg" />
+    <Content Include="media\1075\petri.jpg" />
+    <Content Include="media\1075\petri_thumb.jpg" />
+    <Content Include="media\1076\Cached\FRI_aa831caaa9a16b29685e55e09ef3c5fc6427caa7227639d00a580b9fd12b3283.png" />
+    <Content Include="media\1076\Cached\index.xml" />
+    <Content Include="media\1076\frisbeepoint.png" />
+    <Content Include="media\1077\Cached\index.xml" />
+    <Content Include="media\1077\Cached\INN_d8b18f1b940065fca731c55b6e80430cff454e67b92da75d54b2baa56a4b4410.png" />
+    <Content Include="media\1077\innovastore_logo_clean_650.png" />
+    <Content Include="media\1077\innovastore_logo_clean_650_thumb.jpg" />
     <Content Include="packages.config" />
     <Content Include="css\retee.css">
       <DependentUpon>retee.less</DependentUpon>
@@ -338,6 +430,7 @@
     </Content>
     <Content Include="scripts\banners.js" />
     <Content Include="scripts\jquery-1.11.3.min.js" />
+    <Content Include="ImageGen.ashx" />
     <None Include="scripts\jquery.validate-vsdoc.js" />
     <None Include="scripts\jquery-1.8.0.intellisense.js" />
     <Content Include="scripts\jquery-1.8.0.js" />
@@ -357,6 +450,7 @@
     <Content Include="umbraco\Plugins\MemberExport\Images\memberexport.png" />
     <Content Include="umbraco\Plugins\MemberExport\MemberExport.aspx" />
     <Content Include="umbraco\Plugins\MemberExport\UserControls\MemberExport.ascx" />
+    <Content Include="usercontrols\ImageGenInstaller.ascx" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
     <Content Include="Views\Partials\Grid\Editors\Rte.cshtml" />
@@ -592,6 +686,10 @@
     <Content Include="Views\News.cshtml" />
     <Content Include="Views\NewsListing.cshtml" />
     <Content Include="Views\Board.cshtml" />
+    <Content Include="Views\Course.cshtml" />
+    <Content Include="Views\Partials\MemberRegistrationForm.cshtml" />
+    <Content Include="Views\MemberBenefits.cshtml" />
+    <Content Include="Views\Partners.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -3247,6 +3345,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\MemberRegistrationFormSurfaceController.cs" />
+    <Compile Include="Models\MemberRegistrationFormViewModel.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -3256,8 +3356,8 @@
     <Folder Include="App_Code\" />
     <Folder Include="App_Data\preview\" />
     <Folder Include="App_Data\TEMP\Install\" />
+    <Folder Include="media\1067\" />
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="usercontrols\" />
     <Folder Include="xslt\" />
   </ItemGroup>
   <PropertyGroup>

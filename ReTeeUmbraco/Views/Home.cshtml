@@ -1,18 +1,14 @@
-﻿@using System.Globalization;
-@using Umbraco.Web
-@using ClientDependency.Core.Mvc
+﻿@using Umbraco.Web
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     Layout = "ReTeeMaster.cshtml";
-
-    //Html.RequiresJs("~/js/jquery.cycle.all.js", 1);
-    //Html.RequiresJs("~/scripts/banners.js", 2);
 
 }
 
 <div class="container-fluid homepageBannerContainer hidden-xs">
     <div class="container">
         <div id="banners">
+            <div id="pager"></div>
             @{
                 if (CurrentPage.HasValue("banners"))
                 {
@@ -29,7 +25,7 @@
                             LinkUrl = Umbraco.TypedContent(BannerID).Url;
                         }
 
-                        <div class="col-md-12" style="background-image: url('@Umbraco.TypedMedia(Umbraco.Field(banner, "bannerImage").ToString()).Url');height: 400px;@if (BoolLink) { <text>cursor: pointer;</text> }" @if (BoolLink) { <text> onclick="window.location.href='@LinkUrl'" </text>   }>
+                        <div class="col-md-12 slide" style="background-image: url('@Umbraco.TypedMedia(Umbraco.Field(banner, "bannerImage").ToString()).Url');height: 400px;@if (BoolLink) { <text>cursor: pointer;</text> }" @if (BoolLink) { <text> onclick="window.location.href='@LinkUrl'" </text> }>
                             <div class="col-md-6">
                                 <p class="bannerText">
                                     @Umbraco.Field(banner, "bannerText") @if (BoolLink)
@@ -44,28 +40,5 @@
     </div>
 </div>
 <div class="container">
-    <div class="row">
-        @{
-            if (CurrentPage.HasValue("News"))
-            {
-                var newsNode = Umbraco.TypedContent(CurrentPage.GetPropertyValue<int>("News"));
-
-                foreach (var newsArticle in newsNode.Children)
-                {
-                    <div class="col-lg-4 col-md-6 col-xs-12" onclick="window.location.href='@newsArticle.Url'">
-                        <div class="boxNews">
-                            <div class="boxNewsContainer">
-                                <h3>@newsArticle.Name</h3>
-                                <span class="date">@newsArticle.UpdateDate.ToString("d")</span>
-
-                                <p>@Html.Raw(Umbraco.Field(newsArticle, "lead"))</p>
-                                <p class="readMore">@Umbraco.GetDictionaryValue("Read more")</p>
-                            </div>
-                        </div>
-                    </div>
-                }
-            }
-        }
-    </div>
+    <div class="row">@Umbraco.RenderMacro("NewsListHomepage")</div>
 </div>
-@*@Html.RenderJsHere()*@

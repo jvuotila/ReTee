@@ -1,0 +1,169 @@
+﻿@model ReTeeUmbraco.Models.MemberRegistrationFormViewModel
+@using (Html.BeginUmbracoForm<ReTeeUmbraco.Controllers.MemberRegistrationFormSurfaceController>(
+                "CreateMemberRegistrationMessage"))
+{
+    if (!ViewData.ModelState.IsValid)
+    {
+        <div class="row">
+            <div class="col-md-12" class="error">
+                @Html.ValidationSummary(true, "Lomake ei validi")
+            </div>
+        </div>
+    }
+
+    <fieldset>
+        <div class="row">
+            <div class="col-md-12">
+                @Html.LabelFor(x => x.FirstName) <span class="required">*</span>
+            </div>
+            <div class="col-md-12">
+                @Html.TextBoxFor(x => x.FirstName, new Dictionary<string, Object>
+                    { { "required", "" } })
+                @Html.ValidationMessageFor(x => x.FirstName)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                @Html.LabelFor(x => x.LastName) <span class="required">*</span>
+            </div>
+            <div class="col-md-12">
+                @Html.TextBoxFor(x => x.LastName, new Dictionary<string, Object>
+                    { { "required", "" } })
+                @Html.ValidationMessageFor(x => x.LastName)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                @Html.LabelFor(x => x.EmailAddress) <span class="required">*</span>
+            </div>
+            <div class="col-md-12">
+                @Html.TextBoxFor(x => x.EmailAddress, new Dictionary<string, Object>
+                    { { "required", "" } })
+                @Html.ValidationMessageFor(x => x.EmailAddress)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                @Html.LabelFor(x => x.PhoneNumber) <span class="required">*</span>
+            </div>
+            <div class="col-md-12">
+                @Html.TextBoxFor(x => x.PhoneNumber, new Dictionary<string, Object>
+                    { { "required", "" } })
+                @Html.ValidationMessageFor(x => x.PhoneNumber)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                @Html.LabelFor(x => x.DateOfBirth) <span class="required">*</span>
+            </div>
+            <div class="col-md-12">
+                @Html.TextBoxFor(x => x.DateOfBirth, new Dictionary<string, Object>
+                    { { "required", "" } })
+                @Html.ValidationMessageFor(x => x.DateOfBirth)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                @Html.LabelFor(x => x.StreetAddress) <span class="required">*</span>
+            </div>
+            <div class="col-md-12">
+                @Html.TextBoxFor(x => x.StreetAddress, new Dictionary<string, Object>
+                    { { "required", "" } })
+                @Html.ValidationMessageFor(x => x.StreetAddress)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                @Html.LabelFor(x => x.PostalCode) <span class="required">*</span>
+            </div>
+            <div class="col-md-12">
+                @Html.TextBoxFor(x => x.PostalCode, new Dictionary<string, Object>
+                { { "required", "" } })
+                @Html.ValidationMessageFor(x => x.PostalCode)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                @Html.LabelFor(x => x.City) <span class="required">*</span>
+            </div>
+            <div class="col-md-12">
+                @Html.TextBoxFor(x => x.City, new Dictionary<string, Object>
+                { { "required", "" } })
+                @Html.ValidationMessageFor(x => x.City)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                @Html.RadioButtonFor(x => x.MemberType, "member") <span>Täysjäsenyys 20&euro; aikuinen</span><br/>
+                @Html.RadioButtonFor(x => x.MemberType, "junior") <span>Täysjäsenyys 10&euro; junior</span><br />
+                @Html.RadioButtonFor(x => x.MemberType, "supporter") <span>Kannatusjäsenyys 100&euro;</span><br />
+                @Html.RadioButtonFor(x => x.MemberType, "supportmember") <span>Kannatusjäsenyys 10&euro; (ensisijainen seurani jokin muu)</span>
+                @Html.ValidationMessageFor(x => x.MemberType)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12" style="padding-left: 33px;">
+                @Html.LabelFor(x => x.SupportMemberClub)
+            </div>
+            <div class="col-md-12" style="padding-left: 33px;">
+                @Html.TextBoxFor(x => x.SupportMemberClub)
+                @Html.ValidationMessageFor(x => x.SupportMemberClub)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                @Html.CheckBoxFor(x => x.PDGALicense) <span>Vapaaehtoinen kilpailijalisenssi 50&euro; aikuinen / 25&euro; junior</span>
+                @Html.ValidationMessageFor(x => x.PDGALicense)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                @Html.LabelFor(x => x.PDGALicenseNumber)
+            </div>
+            <div class="col-md-12">
+                @Html.TextBoxFor(x => x.PDGALicenseNumber)
+                @Html.ValidationMessageFor(x => x.PDGALicenseNumber)</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                @Html.CheckBoxFor(x => x.PDGAMemberDisc) <span>PDGA-jäsenkiekko  15&euro; (vain uudet PDGA-jäsenet)</span>
+                @Html.ValidationMessageFor(x => x.PDGAMemberDisc)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                @Html.CheckBoxFor(x => x.DiscGolferMagazine) <span>PDGA DiscGolfer Magazine -lehti 35&euro; / vuosikerta</span>
+                @Html.ValidationMessageFor(x => x.DiscGolferMagazine)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                @Html.LabelFor(x => x.checkCode) <span class="required">*</span>
+            </div>
+            <div class="col-md-12">
+                @Html.TextBoxFor(x => x.checkCode, new Dictionary<string, Object>
+                    { { "required", "" } })
+                @Html.ValidationMessageFor(x => x.checkCode)
+            </div>
+        </div>
+    </fieldset>
+
+    <div class="row" style="margin-top: 40px;">
+        <div class="col-md-12">
+            <input type="submit" class="button" value="Lähetä" />
+        </div>
+    </div>
+}

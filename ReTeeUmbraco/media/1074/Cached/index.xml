@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<imageIndex>
+  <_p>
+    <image>
+      <originalFileName>petri.jpg</originalFileName>
+      <size>37068</size>
+      <dateLastModified>Sun, 24 Jan 2016 10:33:34 GMT</dateLastModified>
+      <width>200</width>
+      <height>200</height>
+      <cachedImage>
+        <fileName>PET_951c160f183a1c8dae32de395e966f08216d245723e7aa8685c7d4dae9a7f252.jpeg</fileName>
+        <dateCreated>Sun, 24 Jan 2016 10:33:58 GMT</dateCreated>
+        <imageFormat>jpeg</imageFormat>
+        <compression>75</compression>
+        <rotate>0</rotate>
+        <flip />
+        <colorMode />
+        <crop>resize</crop>
+        <width>200</width>
+        <height>200</height>
+        <bgColor>#FFFFFF</bgColor>
+        <transparent>True</transparent>
+        <border>0</border>
+        <borderColor>#000000</borderColor>
+        <constrain>False</constrain>
+        <pad>False</pad>
+        <align>left</align>
+        <valign>middle</valign>
+      </cachedImage>
+    </image>
+  </_p>
+</imageIndex>

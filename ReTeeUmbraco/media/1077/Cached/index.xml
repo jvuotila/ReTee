@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<imageIndex>
+  <_i>
+    <image>
+      <originalFileName>innovastore_logo_clean_650.png</originalFileName>
+      <size>83574</size>
+      <dateLastModified>Sun, 24 Jan 2016 14:43:47 GMT</dateLastModified>
+      <width>650</width>
+      <height>337</height>
+      <cachedImage>
+        <fileName>INN_d8b18f1b940065fca731c55b6e80430cff454e67b92da75d54b2baa56a4b4410.png</fileName>
+        <dateCreated>Sun, 24 Jan 2016 14:45:53 GMT</dateCreated>
+        <imageFormat>png</imageFormat>
+        <rotate>0</rotate>
+        <flip />
+        <colorMode />
+        <crop>resize</crop>
+        <width>200</width>
+        <height>104</height>
+        <bgColor>#FFFFFF</bgColor>
+        <transparent>True</transparent>
+        <border>0</border>
+        <borderColor>#000000</borderColor>
+        <constrain>False</constrain>
+        <pad>False</pad>
+        <align>left</align>
+        <valign>middle</valign>
+      </cachedImage>
+    </image>
+  </_i>
+</imageIndex>

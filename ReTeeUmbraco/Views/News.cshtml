@@ -1,4 +1,20 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-    Layout = null;
+    Layout = "ReTeeMaster.cshtml";
 }
+
+<div class="container-fluid artileWrapper">
+    <div class="container">
+        <div class="col-xs-12 col-md-12 articleContainer">
+            <div class="col-md-1 hidden-xs"></div>
+            <div class="col-md-10 col-xs-12 articleBody">
+                <h1>@CurrentPage.Name</h1>
+                <article>
+                    @Html.Raw(Umbraco.Field(CurrentPage, "bodyText"))
+                </article>
+            </div>
+            <div class="col-md-1 hidden-xs">
+            </div>
+        </div>
+    </div>
+</div>

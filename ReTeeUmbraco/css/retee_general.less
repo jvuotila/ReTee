@@ -1,11 +1,14 @@
 ﻿@colorFontDefault: #242424;
 @colorFontNav: #8b110c;
 @colorFontNavHover: #fff;
-@colorFontLink: #ee2d2b;
+@colorFontLink: #8b110c;
+@colorFontBannerText: #fefefe;
+@colorFontError: #ee2d2b;
 
 @bgColorBody: #fff;
 @bgColorNav: #f4f4f4;
 @bgColorNavItemHover: #ee2d2b;
+@bgColorBannerTextShadow: #5C5C5C;
 
 @bgColorArticleContainer: #e2e2e2;
 @bgColorArticleBody: #f2f2f2;
@@ -31,16 +34,31 @@ html, body {
 }
 
 body {
+    background: @bgColorBody;
     .bodyWrapper {
         min-height: 100%;
         height: auto;
         margin: 0 auto -100px;
         padding-bottom: 100px;
     }
-    background: @bgColorBody;
+    a {
+        color: @colorFontLink;
+        text-decoration: none;
+        outline: 0;
+        * {
+            color: @colorFontLink;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+        &:focus {
+            outline: 0;
+        }
+    }
     h1 {
         font-weight: 700;
         font-size: 1.8em;
+        text-transform: uppercase;
     }
     h2 {
         font-weight: 700;
@@ -49,10 +67,31 @@ body {
 
     h3 {
         font-weight: 700;
-        font-size: 1.2em;
+        font-size: 1.1em;
+    }
+    label {
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+    .validation-summary-errors,
+    .error {
+        color: @colorFontError;
+        * {
+            color: @colorFontError;
+            font-size: 1.1em;
+        }
+    }
+    fieldset {
+        .row {
+            margin-bottom: 10px;
+            .field-validation-error {
+                color: @colorFontError;
+            }
+        }
     }
 
-    button {
+    button,
+    input[type="submit"] {
         border: 2px @buttonBorderDefault solid;
         background: @buttonBgDefault;
         padding: 8px 20px;
@@ -60,6 +99,16 @@ body {
         color: @buttonFontDefault;
         &:hover {
             background: #fff;
+        }
+    }
+
+    input[type="submit"] {
+        border-color: darken(@colorFontLink, 10%);
+        background: lighten(@colorFontLink, 5%);
+        color: #fff;
+        &:hover {
+            background: #fff;
+            background: darken(@colorFontLink, 5%);
         }
     }
 
@@ -115,6 +164,11 @@ body {
                                         border-top-color: @colorFontNavHover;
                                     }
                                 }
+                                
+                                &.active {
+                                    background: @bgColorNavItemHover;
+                                    color: @colorFontNavHover;
+                                }
                             }
                         }
                     }
@@ -127,14 +181,41 @@ body {
         background-image: url('images/fabric_of_squares_gray.png');
         -webkit-box-shadow:inset 0 0 50px 0 rgba(0,0,0,0.10);
         box-shadow:inset 0 0 50px 0 rgba(0,0,0,0.10);
-    }
-    .bannerText {
-        margin-top: 20px;
-        font-size: 2em;
-        font-weight: 700;
-        color: #fefefe;
-        text-shadow: 0 2px 5px #5C5C5C;
-    }
+        #pager {
+            position:absolute;
+            bottom: 10px;
+            right: 10px;
+            text-align: center;
+            z-index: 1000;
+            a {
+                display: inline-block;
+                color: @colorFontBannerText;
+                background: @colorFontBannerText;
+                width: 20px;
+                height: 20px;
+                min-width: 20px;
+                min-height: 20px;
+                overflow: hidden;
+                line-height: 20px;
+                margin-right: 10px;
+                outline: 0;
+                .roundedCorners(10px, 10px, 10px, 10px);
+                -webkit-box-shadow: 0 0 5px 0 @bgColorBannerTextShadow;
+                box-shadow: 0 0 5px 0 @bgColorBannerTextShadow;
+                &.activeSlide {
+                    background: @borderDefault;
+                    color: @borderDefault;
+                }
+            }
+        }
+        .bannerText {
+            margin-top: 20px;
+            font-size: 2em;
+            font-weight: 700;
+            color: @colorFontBannerText;
+            text-shadow: 0 2px 5px @bgColorBannerTextShadow;
+        }
+    }    
     .boxNews {
         border-bottom: 4px @borderDefault solid;
         background-color: lighten(@borderDefault, 12%);
@@ -173,13 +254,8 @@ body {
         .articleContainer {
             background: @bgColorArticleContainer;
             border-bottom: 4px darken(@borderDefault, 5%) solid;
-            /*position: relative;
-            margin-bottom: 100px;*/
             .articleBody {
                 background: @bgColorArticleBody;
-                /*top: 100px;*/
-                /*border-bottom: 4px darken(@borderDefault, 5%) solid;*/
-                /*padding: 30px 50px;*/
                 .memberPhoto {
                     text-align: center;
                     .memberPhotoWrapper {
@@ -197,6 +273,18 @@ body {
                     margin-bottom: 50px;
                     .bio {
                         font-style: italic;
+                    }
+                }
+                ul.newsListing {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    .date {
+                        background: maroon;
+                        color: #fff;
+                        padding: 5px 10px;
+                        line-height: 2em;
+                        margin-right: 10px;
                     }
                 }
             }

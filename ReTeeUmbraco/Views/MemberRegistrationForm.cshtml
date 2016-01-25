@@ -2,19 +2,32 @@
 @{
     Layout = "ReTeeMaster.cshtml";
 }
-Etunimi
-Sukunimi
-Sähköpostiosoite
-Puhelinnumero
-Syntymäaika (päivä, kk, vuosi)
-Lähiosoite
-Postinumero
-Postitoimipaikka
-Pääasiallinen seurasi mikäli liityt kannatusjäseneksi
-Haluatko kilpailijalisenssin (50 euroa), mikäli haluat:
-PDGA-numerosi mikäli sinulla sellainen on
-Haluatko lisäksi PDGA jäsenkiekon (15 euroa, vain uudet jäsenet)
-Tilaatko PDGA:n jäsenlehden (35 euroa, 4 numeroa vuodessa)
-<div class="container-fluid">
-    <div class=""
+
+<div class="container-fluid artileWrapper">
+    <div class="container">
+        <div class="col-xs-12 col-md-12 articleContainer">
+            <div class="col-md-1 hidden-xs"></div>
+            <div class="col-md-10 col-xs-12 articleBody">
+                <h1>@CurrentPage.Name</h1>
+                <article>
+                    @{
+                        if (ViewBag.MemberRegistration != null)
+                        {
+                            var viewModel = (ReTeeUmbraco.Models.MemberRegistrationFormViewModel)ViewBag.MemberRegistration;
+                            
+                            @Html.Raw(Umbraco.Field(CurrentPage, "thankYouMessage"))
+                        }
+                        else
+                        {
+                            @Html.Raw(Umbraco.Field(CurrentPage, "bodyText"))
+                            @Html.Partial("MemberRegistrationForm", new ReTeeUmbraco.Models.MemberRegistrationFormViewModel())
+                        }
+                    }
+
+                </article>
+            </div>
+            <div class="col-md-1 hidden-xs">
+            </div>
+        </div>
+    </div>
 </div>

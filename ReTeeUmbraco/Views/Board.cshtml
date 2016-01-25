@@ -22,7 +22,7 @@
                                 <div class="col-xs-12 col-md-4 memberPhoto">
                                     @if (Umbraco.Field(BoardMember, "memberPhoto").ToString() != "")
                                     {
-                                        <div class="memberPhotoWrapper"><img src="/imagegen.ashx?image=@Umbraco.TypedMedia(Umbraco.Field(BoardMember, "memberPhoto").ToString()).Url&height=200&width=200&constrain=false&crop=resize&compression=75" alt="@Umbraco.Field(BoardMember, "memberTitle"), @Umbraco.Field(BoardMember, "memberName")" /></div>
+                                        <div class="memberPhotoWrapper" style="margin-top: 20px;"><img src="/imagegen.ashx?image=@Umbraco.TypedMedia(Umbraco.Field(BoardMember, "memberPhoto").ToString()).Url&height=200&width=200&constrain=false&crop=resize&compression=75" alt="@Umbraco.Field(BoardMember, "memberTitle"), @Umbraco.Field(BoardMember, "memberName")" /></div>
                                     }
                                 </div>
                                 <div class="col-xs-12 col-md-8">
