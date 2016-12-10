@@ -210,3 +210,8 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+/ReTeeUmbraco/media/
+/ReTeeUmbraco/App_Data/cache/
+/ReTeeUmbraco/App_Data/Logs/
+/ReTeeUmbraco/App_Data/TEMP/
+/ReTeeCMS/

@@ -9,6 +9,16 @@
             slideExpr: 'div.slide'
         });
     }
+
+    $("#PDGALicense").change(function () {
+        if ($(this).is(":checked")) {
+            $("#pdgaoptions").slideDown();
+        } else {
+            $("#pdgaoptions").slideUp();
+            $("#PDGAMemberDisc, #DiscGolferMagazine").prop("checked", "");
+            $("#PDGALicenseNumber").val("");
+        }
+    });
 });
 
 $('.dropdown-toggle').dropdown();

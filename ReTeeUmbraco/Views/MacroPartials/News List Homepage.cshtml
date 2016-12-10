@@ -1,0 +1,25 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@using umbraco.NodeFactory
+@using umbraco
+@{
+    Node parent = uQuery.GetNodesByName("_Uutiset").FirstOrDefault();
+    var selection = CurrentPage.Children.Where("Visible").OrderBy("CreateDate desc");
+    int LoopCounter = 1;
+}
+
+@foreach (Node item in parent.ChildrenAsList.OrderByDescending(x => x.Id))
+{
+    if (LoopCounter > 6) { break; }
+    <div class="col-lg-4 col-md-6 col-xs-12" onclick="window.location.href='@item.Url'">
+        <div class="boxNews">
+            <div class="boxNewsContainer">
+                <h3>@item.Name</h3>
+                <span class="date">@item.CreateDate.ToString("dd.MM.yyyy")</span>
+
+                <p>@Html.Raw(item.GetProperty("lead").ToString())</p>
+                <p class="readMore">@Umbraco.GetDictionaryValue("Read more")</p>
+            </div>
+        </div>
+    </div>
+    LoopCounter++;
+}

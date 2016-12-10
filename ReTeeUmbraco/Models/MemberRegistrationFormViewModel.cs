@@ -72,8 +72,8 @@ namespace ReTeeUmbraco.Models
         public bool DiscGolferMagazine { get; set; }
 
         [Required]
-        [Range(12,12, ErrorMessage = "Vastaus ei ole oikein.")]
-        [Display(Name = "Paljonko on viisi plus seitsemän?")]
+        [Range(13,13, ErrorMessage = "Vastaus ei ole oikein.")]
+        [Display(Name = "Paljonko on viisi plus kahdeksan?")]
         public decimal checkCode { get; set; }
 
         //[Required]

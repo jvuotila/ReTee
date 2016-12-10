@@ -103,7 +103,7 @@
             <div class="col-md-12">
                 @Html.RadioButtonFor(x => x.MemberType, "member") <span>Täysjäsenyys 20&euro; aikuinen</span><br/>
                 @Html.RadioButtonFor(x => x.MemberType, "junior") <span>Täysjäsenyys 10&euro; junior</span><br />
-                @Html.RadioButtonFor(x => x.MemberType, "supporter") <span>Kannatusjäsenyys 100&euro;</span><br />
+                @Html.RadioButtonFor(x => x.MemberType, "supporter") <span>Kannatusjäsenyys 50&euro;</span><br />
                 @Html.RadioButtonFor(x => x.MemberType, "supportmember") <span>Kannatusjäsenyys 10&euro; (ensisijainen seurani jokin muu)</span>
                 @Html.ValidationMessageFor(x => x.MemberType)
             </div>
@@ -126,26 +126,29 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-12">
-                @Html.LabelFor(x => x.PDGALicenseNumber)
+        <div id="pdgaoptions" style="display: none;">
+            <div class="row">
+                <div class="col-md-12">
+                    @Html.LabelFor(x => x.PDGALicenseNumber)
+                </div>
+                <div class="col-md-12">
+                    @Html.TextBoxFor(x => x.PDGALicenseNumber)
+                    @Html.ValidationMessageFor(x => x.PDGALicenseNumber)
+                </div>
             </div>
-            <div class="col-md-12">
-                @Html.TextBoxFor(x => x.PDGALicenseNumber)
-                @Html.ValidationMessageFor(x => x.PDGALicenseNumber)</div>
-        </div>
 
-        <div class="row">
-            <div class="col-md-12">
-                @Html.CheckBoxFor(x => x.PDGAMemberDisc) <span>PDGA-jäsenkiekko  15&euro; (vain uudet PDGA-jäsenet)</span>
-                @Html.ValidationMessageFor(x => x.PDGAMemberDisc)
+            <div class="row">
+                <div class="col-md-12">
+                    @Html.CheckBoxFor(x => x.PDGAMemberDisc) <span>PDGA-jäsenkiekko  15&euro; (vain uudet PDGA-jäsenet)</span>
+                    @Html.ValidationMessageFor(x => x.PDGAMemberDisc)
+                </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-md-12">
-                @Html.CheckBoxFor(x => x.DiscGolferMagazine) <span>PDGA DiscGolfer Magazine -lehti 35&euro; / vuosikerta</span>
-                @Html.ValidationMessageFor(x => x.DiscGolferMagazine)
+            <div class="row">
+                <div class="col-md-12">
+                    @Html.CheckBoxFor(x => x.DiscGolferMagazine) <span>PDGA DiscGolfer Magazine -lehti 35&euro; / vuosikerta</span>
+                    @Html.ValidationMessageFor(x => x.DiscGolferMagazine)
+                </div>
             </div>
         </div>
 

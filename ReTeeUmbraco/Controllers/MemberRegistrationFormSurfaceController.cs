@@ -14,11 +14,11 @@ namespace ReTeeUmbraco.Controllers
         private string MemberPersonInCharge = "Miikka Siivonen";
         private string AccountNumber = "FI90 5078 1120 0586 35";
         private string Bic = "OKOYFIHH";
-        private string ReferenceNumber = "20161";
+        private string ReferenceNumber = "20174";
         private int MemberFeeAdult = 20;
         private int MemberFeeJunior = 10;
         private int MemberFeeSupportMember = 10;
-        private int MemberFeeSupporter = 100;
+        private int MemberFeeSupporter = 50;
         private int PDGAFeeAdult = 50;
         private int PDGAFeeJunior = 25;
         private int PDGADiscFee = 15;
@@ -35,7 +35,7 @@ namespace ReTeeUmbraco.Controllers
             täysjäsen,
             juniorjäsen,
             kannatusjäsen_10,
-            kannatusjäsen_100
+            kannatusjäsen_50
         }
 
         private string BuildEmailToSportsClub(MemberRegistrationFormViewModel memberRegistrationMessage)
@@ -60,7 +60,7 @@ namespace ReTeeUmbraco.Controllers
                     sb.Append(MemberTypes.juniorjäsen).Append("<br/>");
                     break;
                 case "supporter":
-                    sb.Append(MemberTypes.kannatusjäsen_100).Append("<br/>");
+                    sb.Append(MemberTypes.kannatusjäsen_50).Append("<br/>");
                     break;
                 case "supportmember":
                     sb.Append(MemberTypes.kannatusjäsen_10).Append("<br/>");

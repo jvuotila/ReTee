@@ -1,0 +1,66 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "ReTeeMaster.cshtml";
+}
+
+<div class="container-fluid artileWrapper">
+    <div class="container">
+        <div class="col-xs-12 col-md-12 articleContainer">
+            <div class="col-md-1 hidden-xs"></div>
+            <div class="col-md-10 col-xs-12 articleBody">
+                <h1>@CurrentPage.Name</h1>
+                <article>
+                    @Html.Raw(Umbraco.Field(CurrentPage, "bodyText"))
+                </article>
+				<div>
+					<h2>Tulostaulukot</h2>
+					<h3>Sarja: avoin</h3>
+					@{
+						if (CurrentPage.Children.Where("mpo == True", "True").Count() > 0)
+						{
+							@Html.Raw("<table class='table table-bordered table-striped'><thead><tr class='success'><th>Sija</th><th>Nimi</th><th>Tulos</th><th>Aika</th></tr></thead><tbody>")
+							var i = 1;
+							
+							foreach (var MPO in CurrentPage.Children.Where("mpo == True", "True").OrderBy("score desc, CreateDate asc").Take(5))
+							{
+								<tr>
+									<td class='col-md-1'>@i.</td>
+									<td class='col-md-7'>@MPO.Name</td>
+									<td class='col-md-2'>@Umbraco.Field(MPO, "score") / 10</td>
+									<td class='col-md-2'>klo @MPO.CreateDate.ToString("HH:mm")</td>
+								</tr>
+								i++;
+							}
+							@Html.Raw("</tbody></table>")
+						}
+					}
+
+
+					<h3>Sarja: naiset / juniorit</h3>
+					@{
+						if (CurrentPage.Children.Where("mpo == False", "True").Count() > 0)
+						{
+							
+							@Html.Raw("<table class='table table-bordered table-striped'><thead><tr class='success'><th>Sija</th><th>Nimi</th><th>Tulos</th><th>Aika</th></tr></thead><tbody>")
+							var j = 1;
+							
+							foreach (var MPO in CurrentPage.Children.Where("mpo == False", "True").OrderBy("score desc, CreateDate asc").Take(5))
+							{
+								<tr>
+									<td class='col-md-1'>@j.</td>
+									<td class='col-md-7'>@MPO.Name</td>
+									<td class='col-md-2'>@Umbraco.Field(MPO, "score") / 10</td>
+									<td class='col-md-2'>klo @MPO.CreateDate.ToString("HH:mm")</td>
+								</tr>
+									j++;
+							}
+							@Html.Raw("</tbody></table>")
+						}
+					}
+				</div>
+            </div>				
+            <div class="col-md-1 hidden-xs">
+            </div>
+        </div>
+    </div>
+</div>
