@@ -690,6 +690,10 @@
     <Content Include="Views\Partials\MemberRegistrationForm.cshtml" />
     <Content Include="Views\MemberBenefits.cshtml" />
     <Content Include="Views\Partners.cshtml" />
+    <Content Include="Views\Players.cshtml" />
+    <Content Include="Views\NewsListingPage.cshtml" />
+    <Content Include="Views\LeaderBoard.cshtml" />
+    <Content Include="Views\Players1.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

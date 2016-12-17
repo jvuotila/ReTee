@@ -267,6 +267,43 @@ body .artileWrapper .articleContainer .articleBody ul.newsListing .date {
   line-height: 2em;
   margin-right: 10px;
 }
+body .artileWrapper .articleContainer .articleBody .playerCardWrapper {
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+body .artileWrapper .articleContainer .articleBody .playerCardWrapper .playerCardContent {
+  border: 1px #d2d2d2 solid;
+  position: relative;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+body .artileWrapper .articleContainer .articleBody .playerCardWrapper .playerCardContent .playerPhoto {
+  border-bottom: 2px #d2d2d2 solid;
+  -webkit-box-shadow: inset 0 0 40px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 40px 0 rgba(0, 0, 0, 0.1);
+  min-height: 100px;
+  background-color: #e2e2e2;
+}
+body .artileWrapper .articleContainer .articleBody .playerCardWrapper .playerCardContent .playerPhoto img {
+  width: 100%;
+  max-width: 100%;
+}
+body .artileWrapper .articleContainer .articleBody .playerCardWrapper .playerCardContent .playerName {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  text-align: right;
+  font-size: 1.8em;
+  line-height: 1.2em;
+  font-style: italic;
+  font-weight: 700;
+  color: #fefefe;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+body .artileWrapper .articleContainer .articleBody .playerCardWrapper .playerCardContent .playerInfo {
+  padding: 20px;
+  background-color: #fff;
+}
 body .footer {
   background-color: #d2d2d2;
   margin-top: 30px;

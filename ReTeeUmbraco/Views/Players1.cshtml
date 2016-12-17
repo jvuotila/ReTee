@@ -1,0 +1,48 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "ReTeeMaster.cshtml";
+}
+
+<div class="container-fluid artileWrapper">
+    <div class="container">
+        <div class="col-xs-12 col-md-12 articleContainer">
+            <div class="col-md-1 hidden-xs"></div>
+            <div class="col-md-10 col-xs-12 articleBody">
+                <h1>@CurrentPage.Name</h1>
+                <article class="lead">
+                    @Html.Raw(Umbraco.Field(CurrentPage, "bodyText"))
+                </article>
+
+                @{
+                    if (CurrentPage.Children.Count() > 0)
+                    {
+                        <div class="row">
+                        @foreach (var Player in CurrentPage.Children.OrderBy("name"))
+                        {
+                        	<div class="col-xs-12 col-md-12 col-lg-6 playerCardWrapper" onclick="window.open('http://www.pdga.com/player/@Umbraco.Field(Player, "pdgaNumber")','_blank');">
+								<div class="playerCardContent">
+                        		    @if (Umbraco.Field(Player, "photo").ToString() != "") {
+                        			<div class="playerPhoto"><img src="/imagegen.ashx?image=@Umbraco.TypedMedia(Umbraco.Field(Player, "photo").ToString()).Url&width=650&constrain=false&crop=resize&compression=75" alt="@Umbraco.Field(Player, "firstName") @Umbraco.Field(Player, "lastName")" /></div>
+                                    }
+                                    <div class="playerName">
+                                        @Umbraco.Field(Player, "firstName") @Umbraco.Field(Player, "lastName")<br />
+                                        #@Umbraco.Field(Player, "pdgaNumber")
+                                    </div>
+                                    <div class="playerInfo">
+                                        <b>Luokitus:</b> @Umbraco.Field(Player, "classification")<br />
+                                        <b>PDGA liittymisvuosi:</b> @Umbraco.Field(Player, "yearOfAccession")<br />
+                                        <b>Uran voitot:</b> @Umbraco.Field(Player, "careerWins") kpl
+                                        <p class="bio">@Umbraco.Field(Player, "bio")</p>
+                                    </div>
+								</div>
+                             </div>
+                        }
+                        </div>
+                    }
+                }
+            </div>
+            <div class="col-md-1 hidden-xs">
+            </div>
+        </div>
+    </div>
+</div>
