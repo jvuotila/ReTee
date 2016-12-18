@@ -1,6 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     Layout = "ReTeeMaster.cshtml";
+    var i = 0;
 }
 
 <div class="container-fluid artileWrapper">
@@ -13,16 +14,19 @@
                     @Html.Raw(Umbraco.Field(CurrentPage, "bodyText"))
                 </article>
 
-                @{
-                    if (CurrentPage.Children.Count() > 0)
+                
+                    @if (CurrentPage.Children.Count() > 0)
                     {
-                        <div class="row">
-                        @foreach (var Player in CurrentPage.Children.OrderBy("name"))
+                        foreach (var Player in CurrentPage.Children.OrderBy("name"))
                         {
-                        	<div class="col-xs-12 col-md-12 col-lg-6 playerCardWrapper" onclick="window.open('http://www.pdga.com/player/@Umbraco.Field(Player, "pdgaNumber")','_blank');">
-								<div class="playerCardContent">
-                        		    @if (Umbraco.Field(Player, "photo").ToString() != "") {
-                        			<div class="playerPhoto"><img src="/imagegen.ashx?image=@Umbraco.TypedMedia(Umbraco.Field(Player, "photo").ToString()).Url&width=650&constrain=false&crop=resize&compression=75" alt="@Umbraco.Field(Player, "firstName") @Umbraco.Field(Player, "lastName")" /></div>
+                            if (i % 2 == 0) {
+                            @:<div class="row">
+                            }
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 playerCardWrapper" onclick="window.open('http://www.pdga.com/player/@Umbraco.Field(Player, "pdgaNumber")','_blank');">
+                                <div class="playerCardContent">
+                                    @if (Umbraco.Field(Player, "photo").ToString() != "")
+                                    {
+                                        <div class="playerPhoto"><img src="/imagegen.ashx?image=@Umbraco.TypedMedia(Umbraco.Field(Player, "photo").ToString()).Url&width=650&constrain=false&crop=resize&compression=75" alt="@Umbraco.Field(Player, "firstName") @Umbraco.Field(Player, "lastName")" /></div>
                                     }
                                     <div class="playerName">
                                         @Umbraco.Field(Player, "firstName") @Umbraco.Field(Player, "lastName")<br />
@@ -34,12 +38,16 @@
                                         <b>Uran voitot:</b> @Umbraco.Field(Player, "careerWins") kpl
                                         <p class="bio">@Umbraco.Field(Player, "bio")</p>
                                     </div>
-								</div>
-                             </div>
+                                </div>
+                            </div>
+                            i++;
+                            if (i % 2 == 0)
+                            {
+                                @:</div>
+                            }
                         }
-                        </div>
                     }
-                }
+               
             </div>
             <div class="col-md-1 hidden-xs">
             </div>
